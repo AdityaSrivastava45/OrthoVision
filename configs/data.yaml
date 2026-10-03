@@ -1,0 +1,24 @@
+# OrthoVision DICOM inspection configuration.
+# Paths are relative to the project root unless they are absolute.
+
+dataset_root: data/raw
+output_dir: outputs
+manifest_dir: outputs/manifests
+viz_dir: outputs/viz
+
+# Thread pool size for DICOM header reads. 1 is fully deterministic and easiest to debug.
+num_workers: 4
+
+logging_level: INFO
+log_file: outputs/logs/dicom_pipeline.log
+
+# Plane detection: max |normal · axis| must exceed this, and beat the next axis by
+# min_axis_separation, or the plane is recorded as "unknown".
+plane_min_alignment: 0.8
+plane_min_axis_separation: 0.2
+
+# Validation thresholds (engineering defaults, not dataset statistics).
+min_slices_warning: 4
+unusual_spacing_cv: 0.15
+duplicate_position_epsilon_mm: 1.0e-3
+orientation_epsilon: 1.0e-3

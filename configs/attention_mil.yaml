@@ -1,0 +1,107 @@
+# OrthoVision Stage 4 - Label-Specific Attention MIL Configuration
+
+# Experiment metadata
+experiment:
+  name: "attention_mil"
+  description: "Frozen DINOv2-S + label-specific attention MIL + plane embeddings for 12-label knee MRI classification"
+
+# Model configuration
+model:
+  dinov2:
+    variant: "dinov2_vits14"          # DINOv2 variant
+    pretrained_path: null             # Path to local pretrained weights (null = random init)
+    freeze_backbone: true             # Freeze backbone (Mode A)
+    unfreeze_last_n_blocks: 0         # Number of last blocks to unfreeze (0 = all frozen)
+    img_size: 224                     # Input resolution
+    patch_size: 14                    # Patch size
+    in_chans: 3                       # Input channels (3 for 2.5D MRI)
+    embed_dim: 384                    # Embedding dimension (ViT-Small)
+    depth: 12                         # Number of transformer blocks
+    num_heads: 6                      # Number of attention heads
+    mlp_ratio: 4.0                    # MLP ratio
+    qkv_bias: true                    # QKV bias
+    drop_path_rate: 0.0               # Drop path rate
+
+  # Pooling configuration (Stage 4: label_specific_attention)
+  pooling_type: "label_specific_attention"  # "mean" | "attention" | "label_specific_attention"
+  pooling_kwargs: {}                  # Additional kwargs for pooling
+
+  # Attention MIL configuration (used when pooling_type == "label_specific_attention")
+  attention_mil:
+    attention_hidden_dim: 128         # Dimension of shared attention features (z_i)
+    num_labels: 12                    # Number of labels (query vectors)
+    use_plane_embeddings: true        # Add learned plane embeddings
+    plane_embed_dim: 16               # Small plane embedding dim (relative to DINOv2 384)
+    num_planes: 3                     # Sagittal, Coronal, Axial
+    attention_temperature: 1.0        # Temperature scaling for attention scores
+    dropout: 0.0                      # Dropout on attention weights
+    entropy_regularization: 0.0       # Entropy regularization (disabled by default)
+    return_attention: true            # Return attention weights during inference
+
+  # Classifier configuration
+  num_labels: 12                      # Number of output labels
+  classifier_dropout: 0.0             # Dropout before classifier
+
+# Training configuration
+training:
+  # Optimization
+  learning_rate: 1e-4                 # Learning rate for attention MIL params
+  weight_decay: 1e-4                  # Weight decay
+  optimizer: "AdamW"                  # Optimizer
+  epochs: 20                          # Number of epochs
+  batch_size: 4                       # Batch size per GPU
+  grad_accum_steps: 1                 # Gradient accumulation steps
+
+  # Mixed precision
+  use_amp: true                       # Automatic mixed precision
+
+  # Scheduler
+  scheduler: "cosine"                 # "cosine" | "constant" | "reduce_on_plateau"
+  warmup_epochs: 2                    # Warmup epochs for cosine scheduler
+
+  # Checkpointing
+  checkpoint_dir: "experiments/checkpoints"
+  save_best: true                     # Save best model based on val macro AUC
+  save_last: true                     # Save last checkpoint periodically
+
+  # Logging
+  log_interval: 10                    # Log every N batches
+  eval_interval: 1                    # Evaluate every N epochs
+
+  # Early stopping
+  early_stopping_patience: 10         # Patience for early stopping
+  early_stopping_min_delta: 1e-4      # Minimum improvement for early stopping
+
+  # Reproducibility
+  deterministic: false                # Full deterministic mode (slower)
+  seed: 42                            # Random seed
+
+# Loss configuration
+loss:
+  weight_method: "balanced"           # Class weight method: "balanced" | "effective_num"
+  min_weight: 0.1                     # Minimum class weight
+  max_weight: 10.0                    # Maximum class weight
+
+# Data split configuration
+split:
+  train_ratio: 0.8                    # Training split ratio
+  val_ratio: 0.2                      # Validation split ratio
+  seed: 42                            # Split random seed
+  patient_aware: true                 # Group by PatientID if available
+  output_dir: "splits"                # Directory to save split files
+
+# Data loading
+dataloader:
+  num_workers: 4                      # DataLoader workers
+  pin_memory: true                    # Pin memory for faster GPU transfer
+  persistent_workers: true            # Keep workers alive between epochs
+
+# Preprocessing configuration (from Stage 2)
+preprocessing:
+  config_path: "configs/preprocessing.yaml"
+
+# Output directories
+output:
+  experiments_dir: "experiments"
+  predictions_dir: "experiments/predictions"
+  logs_dir: "experiments/logs"

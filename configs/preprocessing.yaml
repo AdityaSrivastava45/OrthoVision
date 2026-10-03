@@ -1,0 +1,62 @@
+# OrthoVision Stage-2 preprocessing configuration.
+# All paths are relative to the project root unless absolute.
+
+mode: permissive            # strict | permissive
+
+planes: [Sagittal, Coronal, Axial]
+
+selection:
+  # Fluid preference per requested plane slot: 1, 0, or none (= any).
+  # FACT (Stage 1): Fluid_Sensitive == Fat_Suppression everywhere in train_series.csv,
+  # so a single preference covers both columns.
+  fluid_preference:
+    Sagittal: 1
+    Coronal: 1
+    Axial: none
+  # Soft ranking weights for candidates that pass the hard plane filter.
+  # All components are in [0, 1]; higher weight = more influence. Deterministic
+  # tie-break: score desc, then slice count desc, then SeriesInstanceUID asc.
+  ranking_weights:
+    fluid: 1.5
+    slices: 1.0
+    resolution: 0.5
+    completeness: 1.0
+    consistency: 2.0
+
+normalization:
+  method: percentile         # percentile | zscore
+  # scope: slice = each channel normalized independently (default);
+  #        triplet = previous/center/next share clipping+moment statistics,
+  #        preserving relative intensity inside a 2.5D sample.
+  scope: slice
+  clip_percentiles: [0.5, 99.5]
+
+resize:
+  interpolation: bilinear    # bilinear | nearest
+  fill: 0.0                  # letterbox padding value (post-normalization black)
+
+sampling:
+  num_samples_per_plane: 6
+  # Explicit anatomical fractions in [0, 1] override the even-spacing sampler.
+  sample_positions: null
+  # Even sampler maps requested locations into [margin, 1 - margin] of the stack.
+  boundary_margin: 0.06
+
+neighbors:
+  strategy: index            # index | physical_distance
+  offsets: [-1, 0, 1]        # channel order: previous, center, next
+  # physical_distance mode: pick neighbours closest to center +/- target_spacing_mm.
+  target_spacing_mm: null    # null -> use the series' own median gap * |offset|
+  max_search_slices: 5
+
+qc:
+  min_slices_usable: 3
+  duplicate_position_epsilon_mm: 1.0e-3
+  unusual_spacing_cv: 0.15
+  orientation_min_alignment: 0.8
+
+image_size: [224, 224]
+
+cache:
+  enabled: true
+  dir: outputs/cache/preprocessing
