@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orthovision"
+version = "0.1.0"
+description = "OrthoVision DICOM dataset inspection pipeline for knee MRI research"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "pydicom>=2.4",
+    "pyyaml>=6.0",
+    "pandas>=2.0",
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+# Compressed transfer syntaxes (JPEG, JPEG-LS, JPEG2000, RLE) need extra handlers.
+jpeg = [
+    "pylibjpeg>=2.0",
+    "pylibjpeg-libjpeg>=2.0",
+    "pylibjpeg-openjpeg>=2.0",
+    "pylibjpeg-rle>=2.0",
+]
+dev = [
+    "pytest>=7.4",
+    "ipykernel>=6.25",
+]
+
+[project.scripts]
+orthovision-data = "orthovision.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+addopts = "-q"
