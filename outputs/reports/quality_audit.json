@@ -1,0 +1,113 @@
+{
+  "scope": {
+    "files_audited_full_pixel_pass": 1067,
+    "decode_failures": 0,
+    "series": 30,
+    "studies": 5
+  },
+  "intensity_overview": {
+    "global_min": 0.0,
+    "global_max": 4240.9738800000005,
+    "per_file_max_distribution": {
+      "n": 1067,
+      "mean": 1093.6333455576382,
+      "std": 633.8591233167564,
+      "min": 60.0,
+      "p1": 254.6,
+      "p25": 691.0,
+      "median": 892.0,
+      "p75": 1242.5,
+      "p99": 3149.18345819999,
+      "max": 4240.9738800000005
+    }
+  },
+  "findings": [
+    {
+      "severity": "INFO",
+      "code": "pixel_decode",
+      "detail": "all 1067 files decoded successfully",
+      "evidence": null
+    },
+    {
+      "severity": "WARNING",
+      "code": "non_square_matrices",
+      "detail": "60 image(s) have Rows != Columns",
+      "evidence": {
+        "640x540": 60
+      }
+    },
+    {
+      "severity": "INFO",
+      "code": "size_consistency",
+      "detail": "matrix size constant within every series",
+      "evidence": null
+    },
+    {
+      "severity": "WARNING",
+      "code": "rescale_slope_inconsistent_within_series",
+      "detail": "0 series with multiple slopes, 20 with slope on some slices only",
+      "evidence": {
+        "mixed": [],
+        "partial": [
+          "669639739403",
+          "715412333772",
+          "846432921455",
+          "927426543265",
+          "632489305322"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "spacing_tag_missing",
+      "detail": "SpacingBetweenSlices absent on 160/1067 files (geometry still recoverable from IPP)",
+      "evidence": [
+        "098633701528"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "code": "slice_count_range",
+      "detail": "slices per series: min=16 max=160",
+      "evidence": {
+        "n_series_with_lt_20": 4,
+        "n_series_with_gt_100": 1
+      }
+    },
+    {
+      "severity": "INFO",
+      "code": "modality_check",
+      "detail": "modalities present: ['MR']",
+      "evidence": null
+    },
+    {
+      "severity": "INFO",
+      "code": "transfer_syntax_check",
+      "detail": "transfer syntaxes present: ['1.2.840.10008.1.2.1']",
+      "evidence": null
+    },
+    {
+      "severity": "INFO",
+      "code": "photometric_check",
+      "detail": "photometric interpretations: ['MONOCHROME2']; MONOCHROME1 absent",
+      "evidence": null
+    },
+    {
+      "severity": "INFO",
+      "code": "patient_id_reuse",
+      "detail": "5 distinct pseudonymized PatientIDs in subset; 0 map to >1 study",
+      "evidence": {}
+    },
+    {
+      "severity": "INFO",
+      "code": "description_consistency",
+      "detail": "SeriesDescription constant within every series",
+      "evidence": null
+    }
+  ],
+  "severity_counts": {
+    "CRITICAL": 0,
+    "WARNING": 3,
+    "INFO": 8
+  }
+}

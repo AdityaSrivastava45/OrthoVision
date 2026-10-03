@@ -1,0 +1,479 @@
+{
+  "n_studies": 4407,
+  "n_studies_with_any_label": 58,
+  "n_studies_fully_unlabeled": 4349,
+  "per_label": [
+    {
+      "label": "ACL",
+      "total": 4407,
+      "labeled": 58,
+      "positive": 24,
+      "negative": 34,
+      "missing": 4349,
+      "prevalence_labeled": 0.41379310344827586,
+      "positive_values": [
+        1.0
+      ]
+    },
+    {
+      "label": "MCL",
+      "total": 4407,
+      "labeled": 58,
+      "positive": 9,
+      "negative": 49,
+      "missing": 4349,
+      "prevalence_labeled": 0.15517241379310345,
+      "positive_values": [
+        1.0
+      ]
+    },
+    {
+      "label": "Medial Meniscus",
+      "total": 4407,
+      "labeled": 58,
+      "positive": 26,
+      "negative": 32,
+      "missing": 4349,
+      "prevalence_labeled": 0.4482758620689655,
+      "positive_values": [
+        1.0
+      ]
+    },
+    {
+      "label": "Lateral Meniscus",
+      "total": 4407,
+      "labeled": 58,
+      "positive": 23,
+      "negative": 35,
+      "missing": 4349,
+      "prevalence_labeled": 0.39655172413793105,
+      "positive_values": [
+        1.0
+      ]
+    },
+    {
+      "label": "Medial OA",
+      "total": 4407,
+      "labeled": 58,
+      "positive": 15,
+      "negative": 43,
+      "missing": 4349,
+      "prevalence_labeled": 0.25862068965517243,
+      "positive_values": [
+        1.0
+      ]
+    },
+    {
+      "label": "Lateral OA",
+      "total": 4407,
+      "labeled": 58,
+      "positive": 11,
+      "negative": 47,
+      "missing": 4349,
+      "prevalence_labeled": 0.1896551724137931,
+      "positive_values": [
+        1.0
+      ]
+    },
+    {
+      "label": "PF OA",
+      "total": 4407,
+      "labeled": 58,
+      "positive": 21,
+      "negative": 37,
+      "missing": 4349,
+      "prevalence_labeled": 0.3620689655172414,
+      "positive_values": [
+        1.0
+      ]
+    },
+    {
+      "label": "Effusion",
+      "total": 4407,
+      "labeled": 58,
+      "positive": 35,
+      "negative": 23,
+      "missing": 4349,
+      "prevalence_labeled": 0.603448275862069,
+      "positive_values": [
+        1.0
+      ]
+    },
+    {
+      "label": "Synovitis",
+      "total": 4407,
+      "labeled": 58,
+      "positive": 27,
+      "negative": 31,
+      "missing": 4349,
+      "prevalence_labeled": 0.46551724137931033,
+      "positive_values": [
+        1.0
+      ]
+    },
+    {
+      "label": "Baker's",
+      "total": 4407,
+      "labeled": 58,
+      "positive": 12,
+      "negative": 46,
+      "missing": 4349,
+      "prevalence_labeled": 0.20689655172413793,
+      "positive_values": [
+        1.0
+      ]
+    },
+    {
+      "label": "Contusion",
+      "total": 4407,
+      "labeled": 58,
+      "positive": 19,
+      "negative": 39,
+      "missing": 4349,
+      "prevalence_labeled": 0.3275862068965517,
+      "positive_values": [
+        1.0
+      ]
+    },
+    {
+      "label": "Fracture",
+      "total": 4407,
+      "labeled": 58,
+      "positive": 18,
+      "negative": 40,
+      "missing": 4349,
+      "prevalence_labeled": 0.3103448275862069,
+      "positive_values": [
+        1.0
+      ]
+    }
+  ],
+  "labeled_subset_size": 58,
+  "label_value_domains": {
+    "ACL": [
+      0.0,
+      1.0
+    ],
+    "MCL": [
+      0.0,
+      1.0
+    ],
+    "Medial Meniscus": [
+      0.0,
+      1.0
+    ],
+    "Lateral Meniscus": [
+      0.0,
+      1.0
+    ],
+    "Medial OA": [
+      0.0,
+      1.0
+    ],
+    "Lateral OA": [
+      0.0,
+      1.0
+    ],
+    "PF OA": [
+      0.0,
+      1.0
+    ],
+    "Effusion": [
+      0.0,
+      1.0
+    ],
+    "Synovitis": [
+      0.0,
+      1.0
+    ],
+    "Baker's": [
+      0.0,
+      1.0
+    ],
+    "Contusion": [
+      0.0,
+      1.0
+    ],
+    "Fracture": [
+      0.0,
+      1.0
+    ]
+  },
+  "cooccurrence_joint_positive_counts": {
+    "ACL | MCL": 5,
+    "ACL | Medial Meniscus": 13,
+    "ACL | Lateral Meniscus": 9,
+    "ACL | Medial OA": 3,
+    "ACL | Lateral OA": 4,
+    "ACL | PF OA": 5,
+    "ACL | Effusion": 18,
+    "ACL | Synovitis": 10,
+    "ACL | Baker's": 4,
+    "ACL | Contusion": 13,
+    "ACL | Fracture": 11,
+    "MCL | Medial Meniscus": 2,
+    "MCL | Lateral Meniscus": 4,
+    "MCL | Lateral OA": 1,
+    "MCL | PF OA": 1,
+    "MCL | Effusion": 5,
+    "MCL | Synovitis": 3,
+    "MCL | Contusion": 4,
+    "MCL | Fracture": 4,
+    "Medial Meniscus | Lateral Meniscus": 12,
+    "Medial Meniscus | Medial OA": 12,
+    "Medial Meniscus | Lateral OA": 5,
+    "Medial Meniscus | PF OA": 10,
+    "Medial Meniscus | Effusion": 19,
+    "Medial Meniscus | Synovitis": 15,
+    "Medial Meniscus | Baker's": 9,
+    "Medial Meniscus | Contusion": 8,
+    "Medial Meniscus | Fracture": 9,
+    "Lateral Meniscus | Medial OA": 11,
+    "Lateral Meniscus | Lateral OA": 9,
+    "Lateral Meniscus | PF OA": 10,
+    "Lateral Meniscus | Effusion": 16,
+    "Lateral Meniscus | Synovitis": 13,
+    "Lateral Meniscus | Baker's": 8,
+    "Lateral Meniscus | Contusion": 5,
+    "Lateral Meniscus | Fracture": 7,
+    "Medial OA | Lateral OA": 6,
+    "Medial OA | PF OA": 10,
+    "Medial OA | Effusion": 10,
+    "Medial OA | Synovitis": 10,
+    "Medial OA | Baker's": 8,
+    "Medial OA | Contusion": 1,
+    "Medial OA | Fracture": 2,
+    "Lateral OA | PF OA": 7,
+    "Lateral OA | Effusion": 9,
+    "Lateral OA | Synovitis": 9,
+    "Lateral OA | Baker's": 6,
+    "Lateral OA | Contusion": 1,
+    "Lateral OA | Fracture": 2,
+    "PF OA | Effusion": 14,
+    "PF OA | Synovitis": 14,
+    "PF OA | Baker's": 7,
+    "PF OA | Contusion": 3,
+    "PF OA | Fracture": 4,
+    "Effusion | Synovitis": 22,
+    "Effusion | Baker's": 8,
+    "Effusion | Contusion": 13,
+    "Effusion | Fracture": 13,
+    "Synovitis | Baker's": 8,
+    "Synovitis | Contusion": 10,
+    "Synovitis | Fracture": 9,
+    "Baker's | Contusion": 3,
+    "Baker's | Fracture": 2,
+    "Contusion | Fracture": 10
+  },
+  "cooccurrence_jaccard_nonzero": {
+    "ACL | MCL": 0.1786,
+    "ACL | Medial Meniscus": 0.3514,
+    "ACL | Lateral Meniscus": 0.2368,
+    "ACL | Medial OA": 0.0833,
+    "ACL | Lateral OA": 0.129,
+    "ACL | PF OA": 0.125,
+    "ACL | Effusion": 0.439,
+    "ACL | Synovitis": 0.2439,
+    "ACL | Baker's": 0.125,
+    "ACL | Contusion": 0.4333,
+    "ACL | Fracture": 0.3548,
+    "MCL | Medial Meniscus": 0.0606,
+    "MCL | Lateral Meniscus": 0.1429,
+    "MCL | Lateral OA": 0.0526,
+    "MCL | PF OA": 0.0345,
+    "MCL | Effusion": 0.1282,
+    "MCL | Synovitis": 0.0909,
+    "MCL | Contusion": 0.1667,
+    "MCL | Fracture": 0.1739,
+    "Medial Meniscus | Lateral Meniscus": 0.3243,
+    "Medial Meniscus | Medial OA": 0.4138,
+    "Medial Meniscus | Lateral OA": 0.1562,
+    "Medial Meniscus | PF OA": 0.2703,
+    "Medial Meniscus | Effusion": 0.4524,
+    "Medial Meniscus | Synovitis": 0.3947,
+    "Medial Meniscus | Baker's": 0.3103,
+    "Medial Meniscus | Contusion": 0.2162,
+    "Medial Meniscus | Fracture": 0.2571,
+    "Lateral Meniscus | Medial OA": 0.4074,
+    "Lateral Meniscus | Lateral OA": 0.36,
+    "Lateral Meniscus | PF OA": 0.2941,
+    "Lateral Meniscus | Effusion": 0.381,
+    "Lateral Meniscus | Synovitis": 0.3514,
+    "Lateral Meniscus | Baker's": 0.2963,
+    "Lateral Meniscus | Contusion": 0.1351,
+    "Lateral Meniscus | Fracture": 0.2059,
+    "Medial OA | Lateral OA": 0.3,
+    "Medial OA | PF OA": 0.3846,
+    "Medial OA | Effusion": 0.25,
+    "Medial OA | Synovitis": 0.3125,
+    "Medial OA | Baker's": 0.4211,
+    "Medial OA | Contusion": 0.0303,
+    "Medial OA | Fracture": 0.0645,
+    "Lateral OA | PF OA": 0.28,
+    "Lateral OA | Effusion": 0.2432,
+    "Lateral OA | Synovitis": 0.3103,
+    "Lateral OA | Baker's": 0.3529,
+    "Lateral OA | Contusion": 0.0345,
+    "Lateral OA | Fracture": 0.0741,
+    "PF OA | Effusion": 0.3333,
+    "PF OA | Synovitis": 0.4118,
+    "PF OA | Baker's": 0.2692,
+    "PF OA | Contusion": 0.0811,
+    "PF OA | Fracture": 0.1143,
+    "Effusion | Synovitis": 0.55,
+    "Effusion | Baker's": 0.2051,
+    "Effusion | Contusion": 0.3171,
+    "Effusion | Fracture": 0.325,
+    "Synovitis | Baker's": 0.2581,
+    "Synovitis | Contusion": 0.2778,
+    "Synovitis | Fracture": 0.25,
+    "Baker's | Contusion": 0.1071,
+    "Baker's | Fracture": 0.0714,
+    "Contusion | Fracture": 0.3704
+  },
+  "top_cooccurring_pairs_jaccard": [
+    {
+      "pair": [
+        "Effusion",
+        "Synovitis"
+      ],
+      "jaccard": 0.55
+    },
+    {
+      "pair": [
+        "Medial Meniscus",
+        "Effusion"
+      ],
+      "jaccard": 0.4523809523809524
+    },
+    {
+      "pair": [
+        "ACL",
+        "Effusion"
+      ],
+      "jaccard": 0.43902439024390244
+    },
+    {
+      "pair": [
+        "ACL",
+        "Contusion"
+      ],
+      "jaccard": 0.43333333333333335
+    },
+    {
+      "pair": [
+        "Medial OA",
+        "Baker's"
+      ],
+      "jaccard": 0.42105263157894735
+    },
+    {
+      "pair": [
+        "Medial Meniscus",
+        "Medial OA"
+      ],
+      "jaccard": 0.41379310344827586
+    },
+    {
+      "pair": [
+        "PF OA",
+        "Synovitis"
+      ],
+      "jaccard": 0.4117647058823529
+    },
+    {
+      "pair": [
+        "Lateral Meniscus",
+        "Medial OA"
+      ],
+      "jaccard": 0.4074074074074074
+    }
+  ],
+  "positives_per_labeled_study": {
+    "1": 8,
+    "2": 7,
+    "3": 11,
+    "4": 7,
+    "5": 9,
+    "6": 7,
+    "7": 5,
+    "8": 1,
+    "9": 3
+  },
+  "report_text": {
+    "non_null_reports": 4407,
+    "length_chars": {
+      "min": 52,
+      "median": 977.0,
+      "max": 4743
+    },
+    "language_marker_counts_case_insensitive": {
+      "has_spanish_markers": 681,
+      "has_german_markers": 259,
+      "has_english_markers": 1666
+    },
+    "note": "markers overlap across languages; not a language ID"
+  },
+  "ranked_by_prevalence": [
+    {
+      "label": "Effusion",
+      "prevalence_labeled": 0.6034,
+      "positive": 35
+    },
+    {
+      "label": "Synovitis",
+      "prevalence_labeled": 0.4655,
+      "positive": 27
+    },
+    {
+      "label": "Medial Meniscus",
+      "prevalence_labeled": 0.4483,
+      "positive": 26
+    },
+    {
+      "label": "ACL",
+      "prevalence_labeled": 0.4138,
+      "positive": 24
+    },
+    {
+      "label": "Lateral Meniscus",
+      "prevalence_labeled": 0.3966,
+      "positive": 23
+    },
+    {
+      "label": "PF OA",
+      "prevalence_labeled": 0.3621,
+      "positive": 21
+    },
+    {
+      "label": "Contusion",
+      "prevalence_labeled": 0.3276,
+      "positive": 19
+    },
+    {
+      "label": "Fracture",
+      "prevalence_labeled": 0.3103,
+      "positive": 18
+    },
+    {
+      "label": "Medial OA",
+      "prevalence_labeled": 0.2586,
+      "positive": 15
+    },
+    {
+      "label": "Baker's",
+      "prevalence_labeled": 0.2069,
+      "positive": 12
+    },
+    {
+      "label": "Lateral OA",
+      "prevalence_labeled": 0.1897,
+      "positive": 11
+    },
+    {
+      "label": "MCL",
+      "prevalence_labeled": 0.1552,
+      "positive": 9
+    }
+  ]
+}

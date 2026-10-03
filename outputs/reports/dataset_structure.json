@@ -1,0 +1,264 @@
+{
+  "coverage": {
+    "train_csv": {
+      "rows": 4407,
+      "unique_studies": 4407,
+      "duplicate_study_rows": 0
+    },
+    "train_series_csv": {
+      "rows": 24371,
+      "unique_series": 24371,
+      "studies_represented": 4407
+    },
+    "test_csv": {
+      "rows": 3,
+      "unique_studies": 3
+    },
+    "test_series_csv": {
+      "rows": 15,
+      "unique_series": 15,
+      "studies_represented": 3
+    },
+    "sample_submission": {
+      "rows": 3,
+      "values_all_zero_point_five": true,
+      "study_ids_match_test_csv": true
+    },
+    "disk_subset": {
+      "layout_detected": "train_series/<SeriesInstanceUID>/<SOPInstanceUID>.dcm",
+      "top_level_dir_count": 30,
+      "dirs_keyed_by": "series",
+      "dicom_files_parsed": 1067,
+      "unique_series_on_disk": 30,
+      "unique_studies_on_disk": 5,
+      "studies_on_disk": [
+        "1.2.826.0.1.3680043.8.498.10004873229099053869093324292195817260",
+        "1.2.826.0.1.3680043.8.498.10004945927472656027199792075652399585",
+        "1.2.826.0.1.3680043.8.498.10009278692606631573540062909909132231",
+        "1.2.826.0.1.3680043.8.498.10009639203170750274174707434356622764",
+        "1.2.826.0.1.3680043.8.498.10013663742400736029415768216599146542"
+      ]
+    }
+  },
+  "series_per_study": {
+    "train_csv_full_corpus": {
+      "n": 4407,
+      "mean": 5.530065804402088,
+      "std": 1.393668320167569,
+      "min": 3.0,
+      "p1": 4.0,
+      "p25": 5.0,
+      "median": 5.0,
+      "p75": 6.0,
+      "p99": 10.0,
+      "max": 14.0
+    },
+    "distribution": {
+      "3": 1,
+      "4": 675,
+      "5": 2299,
+      "6": 698,
+      "7": 310,
+      "8": 145,
+      "9": 176,
+      "10": 74,
+      "11": 21,
+      "12": 5,
+      "13": 2,
+      "14": 1
+    }
+  },
+  "slices_per_series": {
+    "disk_subset": {
+      "n": 30,
+      "mean": 35.56666666666667,
+      "std": 24.382621315646563,
+      "min": 16.0,
+      "p1": 16.0,
+      "p25": 29.0,
+      "median": 32.0,
+      "p75": 38.0,
+      "p99": 127.5200000000001,
+      "max": 160.0
+    },
+    "min": 16,
+    "max": 160,
+    "distribution": {
+      "16": 3,
+      "18": 1,
+      "22": 2,
+      "29": 3,
+      "30": 4,
+      "32": 3,
+      "34": 2,
+      "35": 2,
+      "38": 6,
+      "40": 2,
+      "48": 1,
+      "160": 1
+    }
+  },
+  "plane_distribution": {
+    "train_series_csv_full": {
+      "Sagittal": 9864,
+      "Coronal": 8609,
+      "Axial": 5898
+    },
+    "test_series_csv": {
+      "Sagittal": 7,
+      "Axial": 4,
+      "Coronal": 4
+    },
+    "disk_subset": {
+      "Coronal": 11,
+      "Sagittal": 11,
+      "Axial": 8
+    }
+  },
+  "fluid_sensitive": {
+    "train_series_csv_full": {
+      "1": 14010,
+      "0": 10361
+    },
+    "by_plane_full_corpus": {
+      "Sagittal": {
+        "0": 5197,
+        "1": 4667
+      },
+      "Coronal": {
+        "1": 4624,
+        "0": 3985
+      },
+      "Axial": {
+        "1": 4719,
+        "0": 1179
+      }
+    }
+  },
+  "fat_suppression": {
+    "train_series_csv_full": {
+      "1": 14010,
+      "0": 10361
+    },
+    "by_plane_full_corpus": {
+      "Sagittal": {
+        "0": 5197,
+        "1": 4667
+      },
+      "Coronal": {
+        "1": 4624,
+        "0": 3985
+      },
+      "Axial": {
+        "1": 4719,
+        "0": 1179
+      }
+    }
+  },
+  "plane_fluid_fat_combinations": [
+    {
+      "Anatomical_Plane": "Axial",
+      "Fluid_Sensitive": 0,
+      "Fat_Suppression": 0,
+      "n": 1179
+    },
+    {
+      "Anatomical_Plane": "Axial",
+      "Fluid_Sensitive": 1,
+      "Fat_Suppression": 1,
+      "n": 4719
+    },
+    {
+      "Anatomical_Plane": "Coronal",
+      "Fluid_Sensitive": 0,
+      "Fat_Suppression": 0,
+      "n": 3985
+    },
+    {
+      "Anatomical_Plane": "Coronal",
+      "Fluid_Sensitive": 1,
+      "Fat_Suppression": 1,
+      "n": 4624
+    },
+    {
+      "Anatomical_Plane": "Sagittal",
+      "Fluid_Sensitive": 0,
+      "Fat_Suppression": 0,
+      "n": 5197
+    },
+    {
+      "Anatomical_Plane": "Sagittal",
+      "Fluid_Sensitive": 1,
+      "Fat_Suppression": 1,
+      "n": 4667
+    }
+  ],
+  "image_dimensions": {
+    "rows_pixels": {
+      "384": 275,
+      "640": 257,
+      "416": 200,
+      "256": 160,
+      "768": 68,
+      "320": 35,
+      "560": 34,
+      "512": 22,
+      "576": 16
+    },
+    "columns_pixels": {
+      "384": 275,
+      "416": 200,
+      "640": 197,
+      "256": 160,
+      "768": 68,
+      "540": 60,
+      "320": 35,
+      "560": 34,
+      "512": 22,
+      "576": 16
+    },
+    "non_square_or_mixed_note": "{(640, 540): 60}"
+  },
+  "missing_values": {
+    "train_csv_non_label_columns": {},
+    "train_labels_missing_total_across_12": 52188,
+    "train_series_csv": {},
+    "test_series_csv": {}
+  },
+  "duplicates": {
+    "train_duplicate_studyinstanceuid": 0,
+    "train_series_duplicate_series_uid": 0,
+    "train_series_duplicate_study_series_pair": 0,
+    "dicom_duplicate_sop_uid_within_scan": 0,
+    "label_cols_checked": [
+      "ACL",
+      "MCL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "PF OA",
+      "Effusion",
+      "Synovitis",
+      "Baker's",
+      "Contusion",
+      "Fracture"
+    ]
+  },
+  "orphans_and_consistency": {
+    "disk_series_not_in_train_series_csv": 0,
+    "examples": [],
+    "csv_series_without_disk_files": 24341,
+    "disk_studies_not_in_train_csv": 0,
+    "csv_studies_without_disk_data": 4402,
+    "files_missing_study_or_series_uid": 0,
+    "folder_name_equals_header_series_uid_rate": 1.0,
+    "csv_series_to_study_mapping_matches_dicom_headers": true,
+    "train_test_study_overlap": 0,
+    "train_test_series_overlap": 0
+  },
+  "disk_completeness_vs_csv": {
+    "studies_with_partial_disk_data": 0,
+    "detail": {}
+  }
+}

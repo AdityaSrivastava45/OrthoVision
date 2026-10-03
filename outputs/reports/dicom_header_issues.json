@@ -1,0 +1,9 @@
+{
+  "counts": {
+    "files_seen": 1073,
+    "dicom_valid": 1067,
+    "dicom_unreadable": 0,
+    "not_dicom": 6
+  },
+  "issues": []
+}

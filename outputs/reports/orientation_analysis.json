@@ -1,0 +1,697 @@
+{
+  "method": "normal = normalize(IOP_row x IOP_col) in LPS; X->sagittal Y->coronal Z->axial; plane requires max|axis|>=0.8 and margin>=0.2",
+  "thresholds": {
+    "min_alignment": 0.8,
+    "min_axis_separation": 0.2
+  },
+  "n_series_on_disk": 30,
+  "series_with_derivable_plane": 30,
+  "agreement_rate_overall": 1.0,
+  "agreement_by_csv_plane": {
+    "Sagittal": {
+      "n": 11,
+      "agree": 11
+    },
+    "Coronal": {
+      "n": 11,
+      "agree": 11
+    },
+    "Axial": {
+      "n": 8,
+      "agree": 8
+    }
+  },
+  "confusions": [],
+  "unknown_plane_series": [],
+  "per_series": [
+    {
+      "series_uid_tail": "347467111543",
+      "csv_plane": "Coronal",
+      "n_slices": 16,
+      "n_usable_normals": 16,
+      "normal_lps": [
+        -0.243182,
+        0.841005,
+        -0.483295
+      ],
+      "alignment": {
+        "sagittal": 0.243182,
+        "coronal": 0.841005,
+        "axial": 0.483295
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "coronal",
+      "alignment_of_best": 0.841005,
+      "separation_best_minus_second": 0.35771,
+      "derived_plane": "coronal"
+    },
+    {
+      "series_uid_tail": "657887905795",
+      "csv_plane": "Coronal",
+      "n_slices": 32,
+      "n_usable_normals": 32,
+      "normal_lps": [
+        -0.177085,
+        0.977272,
+        0.116533
+      ],
+      "alignment": {
+        "sagittal": 0.177085,
+        "coronal": 0.977272,
+        "axial": 0.116533
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "coronal",
+      "alignment_of_best": 0.977272,
+      "separation_best_minus_second": 0.800188,
+      "derived_plane": "coronal"
+    },
+    {
+      "series_uid_tail": "062377650204",
+      "csv_plane": "Axial",
+      "n_slices": 30,
+      "n_usable_normals": 30,
+      "normal_lps": [
+        -0.005498,
+        -0.004479,
+        0.999975
+      ],
+      "alignment": {
+        "sagittal": 0.005498,
+        "coronal": 0.004479,
+        "axial": 0.999975
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "axial",
+      "alignment_of_best": 0.999975,
+      "separation_best_minus_second": 0.994477,
+      "derived_plane": "axial"
+    },
+    {
+      "series_uid_tail": "669639739403",
+      "csv_plane": "Axial",
+      "n_slices": 40,
+      "n_usable_normals": 40,
+      "normal_lps": [
+        0.062791,
+        -0.050963,
+        0.996725
+      ],
+      "alignment": {
+        "sagittal": 0.062791,
+        "coronal": 0.050963,
+        "axial": 0.996725
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "axial",
+      "alignment_of_best": 0.996725,
+      "separation_best_minus_second": 0.933934,
+      "derived_plane": "axial"
+    },
+    {
+      "series_uid_tail": "150081778633",
+      "csv_plane": "Sagittal",
+      "n_slices": 29,
+      "n_usable_normals": 29,
+      "normal_lps": [
+        -0.992427,
+        0.114937,
+        -0.04333
+      ],
+      "alignment": {
+        "sagittal": 0.992427,
+        "coronal": 0.114937,
+        "axial": 0.04333
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "sagittal",
+      "alignment_of_best": 0.992427,
+      "separation_best_minus_second": 0.87749,
+      "derived_plane": "sagittal"
+    },
+    {
+      "series_uid_tail": "715412333772",
+      "csv_plane": "Sagittal",
+      "n_slices": 22,
+      "n_usable_normals": 22,
+      "normal_lps": [
+        -0.997753,
+        -0.03219,
+        -0.058753
+      ],
+      "alignment": {
+        "sagittal": 0.997753,
+        "coronal": 0.03219,
+        "axial": 0.058753
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "sagittal",
+      "alignment_of_best": 0.997753,
+      "separation_best_minus_second": 0.939001,
+      "derived_plane": "sagittal"
+    },
+    {
+      "series_uid_tail": "846432921455",
+      "csv_plane": "Coronal",
+      "n_slices": 38,
+      "n_usable_normals": 38,
+      "normal_lps": [
+        -0.185125,
+        0.981845,
+        0.041343
+      ],
+      "alignment": {
+        "sagittal": 0.185125,
+        "coronal": 0.981845,
+        "axial": 0.041343
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "coronal",
+      "alignment_of_best": 0.981845,
+      "separation_best_minus_second": 0.79672,
+      "derived_plane": "coronal"
+    },
+    {
+      "series_uid_tail": "949977121036",
+      "csv_plane": "Axial",
+      "n_slices": 30,
+      "n_usable_normals": 30,
+      "normal_lps": [
+        -0.005498,
+        -0.004479,
+        0.999975
+      ],
+      "alignment": {
+        "sagittal": 0.005498,
+        "coronal": 0.004479,
+        "axial": 0.999975
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "axial",
+      "alignment_of_best": 0.999975,
+      "separation_best_minus_second": 0.994477,
+      "derived_plane": "axial"
+    },
+    {
+      "series_uid_tail": "927426543265",
+      "csv_plane": "Axial",
+      "n_slices": 18,
+      "n_usable_normals": 18,
+      "normal_lps": [
+        -0.020219,
+        -0.065183,
+        0.997668
+      ],
+      "alignment": {
+        "sagittal": 0.020219,
+        "coronal": 0.065183,
+        "axial": 0.997668
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "axial",
+      "alignment_of_best": 0.997668,
+      "separation_best_minus_second": 0.932486,
+      "derived_plane": "axial"
+    },
+    {
+      "series_uid_tail": "632489305322",
+      "csv_plane": "Sagittal",
+      "n_slices": 35,
+      "n_usable_normals": 35,
+      "normal_lps": [
+        -0.974788,
+        0.22064,
+        0.033264
+      ],
+      "alignment": {
+        "sagittal": 0.974788,
+        "coronal": 0.22064,
+        "axial": 0.033264
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "sagittal",
+      "alignment_of_best": 0.974788,
+      "separation_best_minus_second": 0.754148,
+      "derived_plane": "sagittal"
+    },
+    {
+      "series_uid_tail": "871973097711",
+      "csv_plane": "Sagittal",
+      "n_slices": 29,
+      "n_usable_normals": 29,
+      "normal_lps": [
+        -0.992427,
+        0.114937,
+        -0.04333
+      ],
+      "alignment": {
+        "sagittal": 0.992427,
+        "coronal": 0.114937,
+        "axial": 0.04333
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "sagittal",
+      "alignment_of_best": 0.992427,
+      "separation_best_minus_second": 0.87749,
+      "derived_plane": "sagittal"
+    },
+    {
+      "series_uid_tail": "293168736174",
+      "csv_plane": "Coronal",
+      "n_slices": 16,
+      "n_usable_normals": 16,
+      "normal_lps": [
+        0.079493,
+        0.994237,
+        0.071923
+      ],
+      "alignment": {
+        "sagittal": 0.079493,
+        "coronal": 0.994237,
+        "axial": 0.071923
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "coronal",
+      "alignment_of_best": 0.994237,
+      "separation_best_minus_second": 0.914744,
+      "derived_plane": "coronal"
+    },
+    {
+      "series_uid_tail": "089055309042",
+      "csv_plane": "Axial",
+      "n_slices": 48,
+      "n_usable_normals": 48,
+      "normal_lps": [
+        0.011375,
+        -0.057848,
+        0.998261
+      ],
+      "alignment": {
+        "sagittal": 0.011375,
+        "coronal": 0.057848,
+        "axial": 0.998261
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "axial",
+      "alignment_of_best": 0.998261,
+      "separation_best_minus_second": 0.940413,
+      "derived_plane": "axial"
+    },
+    {
+      "series_uid_tail": "384511165237",
+      "csv_plane": "Sagittal",
+      "n_slices": 34,
+      "n_usable_normals": 34,
+      "normal_lps": [
+        -0.99953,
+        -0.000307,
+        0.030654
+      ],
+      "alignment": {
+        "sagittal": 0.99953,
+        "coronal": 0.000307,
+        "axial": 0.030654
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "sagittal",
+      "alignment_of_best": 0.99953,
+      "separation_best_minus_second": 0.968876,
+      "derived_plane": "sagittal"
+    },
+    {
+      "series_uid_tail": "111255984309",
+      "csv_plane": "Coronal",
+      "n_slices": 38,
+      "n_usable_normals": 38,
+      "normal_lps": [
+        -0.185125,
+        0.981845,
+        0.041343
+      ],
+      "alignment": {
+        "sagittal": 0.185125,
+        "coronal": 0.981845,
+        "axial": 0.041343
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "coronal",
+      "alignment_of_best": 0.981845,
+      "separation_best_minus_second": 0.79672,
+      "derived_plane": "coronal"
+    },
+    {
+      "series_uid_tail": "744559693623",
+      "csv_plane": "Sagittal",
+      "n_slices": 38,
+      "n_usable_normals": 38,
+      "normal_lps": [
+        -0.999669,
+        0.01212,
+        0.022692
+      ],
+      "alignment": {
+        "sagittal": 0.999669,
+        "coronal": 0.01212,
+        "axial": 0.022692
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "sagittal",
+      "alignment_of_best": 0.999669,
+      "separation_best_minus_second": 0.976977,
+      "derived_plane": "sagittal"
+    },
+    {
+      "series_uid_tail": "147390476697",
+      "csv_plane": "Coronal",
+      "n_slices": 16,
+      "n_usable_normals": 16,
+      "normal_lps": [
+        0.079493,
+        0.994237,
+        0.071923
+      ],
+      "alignment": {
+        "sagittal": 0.079493,
+        "coronal": 0.994237,
+        "axial": 0.071923
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "coronal",
+      "alignment_of_best": 0.994237,
+      "separation_best_minus_second": 0.914744,
+      "derived_plane": "coronal"
+    },
+    {
+      "series_uid_tail": "265618938578",
+      "csv_plane": "Sagittal",
+      "n_slices": 35,
+      "n_usable_normals": 35,
+      "normal_lps": [
+        -0.974788,
+        0.22064,
+        0.033264
+      ],
+      "alignment": {
+        "sagittal": 0.974788,
+        "coronal": 0.22064,
+        "axial": 0.033264
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "sagittal",
+      "alignment_of_best": 0.974788,
+      "separation_best_minus_second": 0.754148,
+      "derived_plane": "sagittal"
+    },
+    {
+      "series_uid_tail": "871969421711",
+      "csv_plane": "Sagittal",
+      "n_slices": 34,
+      "n_usable_normals": 34,
+      "normal_lps": [
+        -0.99953,
+        -0.000307,
+        0.030654
+      ],
+      "alignment": {
+        "sagittal": 0.99953,
+        "coronal": 0.000307,
+        "axial": 0.030654
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "sagittal",
+      "alignment_of_best": 0.99953,
+      "separation_best_minus_second": 0.968876,
+      "derived_plane": "sagittal"
+    },
+    {
+      "series_uid_tail": "098633701528",
+      "csv_plane": "Axial",
+      "n_slices": 160,
+      "n_usable_normals": 160,
+      "normal_lps": [
+        0.008546,
+        -0.074173,
+        0.997209
+      ],
+      "alignment": {
+        "sagittal": 0.008546,
+        "coronal": 0.074173,
+        "axial": 0.997209
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "axial",
+      "alignment_of_best": 0.997209,
+      "separation_best_minus_second": 0.923036,
+      "derived_plane": "axial"
+    },
+    {
+      "series_uid_tail": "038670363546",
+      "csv_plane": "Sagittal",
+      "n_slices": 22,
+      "n_usable_normals": 22,
+      "normal_lps": [
+        -0.997753,
+        -0.03219,
+        -0.058753
+      ],
+      "alignment": {
+        "sagittal": 0.997753,
+        "coronal": 0.03219,
+        "axial": 0.058753
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "sagittal",
+      "alignment_of_best": 0.997753,
+      "separation_best_minus_second": 0.939001,
+      "derived_plane": "sagittal"
+    },
+    {
+      "series_uid_tail": "772011627242",
+      "csv_plane": "Coronal",
+      "n_slices": 32,
+      "n_usable_normals": 32,
+      "normal_lps": [
+        -0.177085,
+        0.977272,
+        0.116533
+      ],
+      "alignment": {
+        "sagittal": 0.177085,
+        "coronal": 0.977272,
+        "axial": 0.116533
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "coronal",
+      "alignment_of_best": 0.977272,
+      "separation_best_minus_second": 0.800188,
+      "derived_plane": "coronal"
+    },
+    {
+      "series_uid_tail": "143485515885",
+      "csv_plane": "Coronal",
+      "n_slices": 32,
+      "n_usable_normals": 32,
+      "normal_lps": [
+        -0.177085,
+        0.977272,
+        0.116533
+      ],
+      "alignment": {
+        "sagittal": 0.177085,
+        "coronal": 0.977272,
+        "axial": 0.116533
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "coronal",
+      "alignment_of_best": 0.977272,
+      "separation_best_minus_second": 0.800188,
+      "derived_plane": "coronal"
+    },
+    {
+      "series_uid_tail": "990029424266",
+      "csv_plane": "Axial",
+      "n_slices": 38,
+      "n_usable_normals": 38,
+      "normal_lps": [
+        0.015589,
+        -0.004335,
+        0.999869
+      ],
+      "alignment": {
+        "sagittal": 0.015589,
+        "coronal": 0.004335,
+        "axial": 0.999869
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "axial",
+      "alignment_of_best": 0.999869,
+      "separation_best_minus_second": 0.98428,
+      "derived_plane": "axial"
+    },
+    {
+      "series_uid_tail": "927478147680",
+      "csv_plane": "Coronal",
+      "n_slices": 30,
+      "n_usable_normals": 30,
+      "normal_lps": [
+        0.004074,
+        0.992157,
+        0.124929
+      ],
+      "alignment": {
+        "sagittal": 0.004074,
+        "coronal": 0.992157,
+        "axial": 0.124929
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "coronal",
+      "alignment_of_best": 0.992157,
+      "separation_best_minus_second": 0.867228,
+      "derived_plane": "coronal"
+    },
+    {
+      "series_uid_tail": "225773846709",
+      "csv_plane": "Coronal",
+      "n_slices": 38,
+      "n_usable_normals": 38,
+      "normal_lps": [
+        0.144291,
+        0.988386,
+        0.047686
+      ],
+      "alignment": {
+        "sagittal": 0.144291,
+        "coronal": 0.988386,
+        "axial": 0.047686
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "coronal",
+      "alignment_of_best": 0.988386,
+      "separation_best_minus_second": 0.844094,
+      "derived_plane": "coronal"
+    },
+    {
+      "series_uid_tail": "037773479273",
+      "csv_plane": "Sagittal",
+      "n_slices": 38,
+      "n_usable_normals": 38,
+      "normal_lps": [
+        -0.999669,
+        0.01212,
+        0.022692
+      ],
+      "alignment": {
+        "sagittal": 0.999669,
+        "coronal": 0.01212,
+        "axial": 0.022692
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "sagittal",
+      "alignment_of_best": 0.999669,
+      "separation_best_minus_second": 0.976977,
+      "derived_plane": "sagittal"
+    },
+    {
+      "series_uid_tail": "811845777102",
+      "csv_plane": "Axial",
+      "n_slices": 40,
+      "n_usable_normals": 40,
+      "normal_lps": [
+        0.062791,
+        -0.050963,
+        0.996725
+      ],
+      "alignment": {
+        "sagittal": 0.062791,
+        "coronal": 0.050963,
+        "axial": 0.996725
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "axial",
+      "alignment_of_best": 0.996725,
+      "separation_best_minus_second": 0.933934,
+      "derived_plane": "axial"
+    },
+    {
+      "series_uid_tail": "483306796699",
+      "csv_plane": "Sagittal",
+      "n_slices": 29,
+      "n_usable_normals": 29,
+      "normal_lps": [
+        -0.992427,
+        0.114937,
+        -0.04333
+      ],
+      "alignment": {
+        "sagittal": 0.992427,
+        "coronal": 0.114937,
+        "axial": 0.04333
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "sagittal",
+      "alignment_of_best": 0.992427,
+      "separation_best_minus_second": 0.87749,
+      "derived_plane": "sagittal"
+    },
+    {
+      "series_uid_tail": "488213553280",
+      "csv_plane": "Coronal",
+      "n_slices": 30,
+      "n_usable_normals": 30,
+      "normal_lps": [
+        0.004074,
+        0.992157,
+        0.124929
+      ],
+      "alignment": {
+        "sagittal": 0.004074,
+        "coronal": 0.992157,
+        "axial": 0.124929
+      },
+      "within_series_normal_spread": 0.0,
+      "dominant_axis": "coronal",
+      "alignment_of_best": 0.992157,
+      "separation_best_minus_second": 0.867228,
+      "derived_plane": "coronal"
+    }
+  ],
+  "iop_constant_within_series_rate": 1.0,
+  "normal_sign_conventions_observed": [
+    {
+      "sign_x": -1.0,
+      "sign_y": -1.0,
+      "sign_z": -1.0,
+      "n_series": 2
+    },
+    {
+      "sign_x": -1.0,
+      "sign_y": -1.0,
+      "sign_z": 1.0,
+      "n_series": 5
+    },
+    {
+      "sign_x": -1.0,
+      "sign_y": 1.0,
+      "sign_z": -1.0,
+      "n_series": 4
+    },
+    {
+      "sign_x": -1.0,
+      "sign_y": 1.0,
+      "sign_z": 1.0,
+      "n_series": 9
+    },
+    {
+      "sign_x": 1.0,
+      "sign_y": -1.0,
+      "sign_z": 1.0,
+      "n_series": 5
+    },
+    {
+      "sign_x": 1.0,
+      "sign_y": 1.0,
+      "sign_z": 1.0,
+      "n_series": 5
+    }
+  ]
+}
